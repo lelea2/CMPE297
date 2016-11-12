@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  assigment1
+//  assignment2
 //
-//  Created by Dao, Khanh on 11/8/16.
+//  Created by Dao, Khanh on 11/12/16.
 //  Copyright © 2016 cmpe297. All rights reserved.
 //
 
@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var tempTextField: UITextField!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,7 +21,5 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func closeBtn(sender: UIButton) {
-    }
 }
 
