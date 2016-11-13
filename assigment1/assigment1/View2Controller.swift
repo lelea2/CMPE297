@@ -11,7 +11,7 @@ import UIKit
 
 class View2Controller : UIViewController {
 
-    var numberToDisplay = 0
+    var numberToDisplay = 0.0
 
     @IBOutlet var convertText: UILabel!
     

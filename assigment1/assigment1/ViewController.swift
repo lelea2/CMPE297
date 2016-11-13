@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     
     @IBOutlet var labelTemp: UILabel!
     
+    let font:UIFont? = UIFont(name: "Helvetica", size:17)
+    let fontSuper:UIFont? = UIFont(name: "Helvetica", size:10)
+//    let attString:NSMutableAttributedString = NSMutableAttributedString(string: "oF", attributes: [NSFontAttributeName:font!])
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -27,18 +32,19 @@ class ViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowConvertSegue" {
-            let farenheitTemp = Int(tempTextField.text!)
+            let farenheitTemp = Double(tempTextField.text!)
             if let destinationVC = segue.destinationViewController as? View2Controller {
-                destinationVC.numberToDisplay = convertToCelsius(farenheitTemp!)
+                destinationVC.numberToDisplay = fahrenheitToCelcius(farenheitTemp!)
             }
         }
     }
     
     //Helper function to convert to Fahrenheit
-    func convertToCelsius(fahrenheit: Int) -> Int {
-        return Int(5.0 / 9.0 * (Double(fahrenheit) - 32.0))
+    func fahrenheitToCelcius(fahrenheit:Double) -> Double {
+        let celcius = Double(5.0 / 9.0 * (Double(fahrenheit) - 32.0))
+        return Double(round(celcius * 100) / 100)
     }
-
+    
     @IBAction func closeBtn(sender: UIButton) {
         exit(0);
     }
