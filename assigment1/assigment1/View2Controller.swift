@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class View2Controller : UIViewController {
+    @IBOutlet var convertText: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

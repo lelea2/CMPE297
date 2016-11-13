@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="721.5" y="612.5"/>
         </scene>
-        <!--View Controller-->
+        <!--View2 Controller-->
         <scene sceneID="Elo-Og-KcC">
             <objects>
-                <viewController id="aCy-gQ-AVR" sceneMemberID="viewController">
+                <viewController id="aCy-gQ-AVR" customClass="View2Controller" customModule="assigment1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oFh-eB-VBZ"/>
                         <viewControllerLayoutGuide type="bottom" id="HfZ-Vg-8Ub"/>
@@ -113,11 +113,26 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mce-Rr-3tx">
+                                <rect key="frame" x="208" y="185" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6VQ-PF-9wR">
+                                <rect key="frame" x="139" y="176" width="113" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.32845931900000003" green="0.69894848529999998" blue="0.85853648559999995" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.31299188387521187" green="0.66684139428120703" blue="0.82378087662564092" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="convertText" destination="6VQ-PF-9wR" id="FlA-yx-5Cd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nuE-7H-Or9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
