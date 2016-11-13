@@ -10,7 +10,18 @@ import Foundation
 import UIKit
 
 class View2Controller : UIViewController {
+
+    var numberToDisplay = 0
+
     @IBOutlet var convertText: UILabel!
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        convertText.text = "Celcius:  \(numberToDisplay) oC."
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
