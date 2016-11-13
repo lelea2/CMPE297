@@ -9,14 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var studentIdField: UITextField!
-
-    @IBOutlet var groupField: UITextField!
     
-    @IBOutlet var bloodTypeField: UITextField!
+    @IBOutlet var bloodGroupField: UITextField!
     
-    @IBOutlet var medicationField: UITextField!
+    @IBOutlet var allergiesField: UITextView!
+    
+    @IBOutlet var medicationField: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
