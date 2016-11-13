@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var bookNameField: UITextField!
+    @IBOutlet var authorField: UITextField!
+    @IBOutlet var descField: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,7 +23,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
+    @IBAction func saveStorage(sender: UIButton) {
+    }
 
+    @IBAction func saveArchive(sender: UIButton) {
+    }
+    
 }
 
