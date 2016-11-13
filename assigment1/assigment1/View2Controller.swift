@@ -12,6 +12,8 @@ import UIKit
 class View2Controller : UIViewController {
 
     var numberToDisplay = 0.0
+    let font:UIFont? = UIFont(name: "Helvetica", size:17)
+    let fontSuper:UIFont? = UIFont(name: "Helvetica", size:10)
 
     @IBOutlet var convertText: UILabel!
     
@@ -19,7 +21,12 @@ class View2Controller : UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        convertText.text = "Celcius:  \(numberToDisplay) oC."
+        let str = "Celcius:  \(numberToDisplay) oC."
+        let length = str.characters.count
+        
+        let attString:NSMutableAttributedString = NSMutableAttributedString(string: str, attributes: [NSFontAttributeName:font!])
+        attString.setAttributes([NSFontAttributeName:fontSuper!,NSBaselineOffsetAttributeName:8], range: NSRange(location: length - 3,length:1))
+        convertText.attributedText = attString
     }
     
     override func viewDidLoad() {

@@ -15,14 +15,15 @@ class ViewController: UIViewController {
     
     @IBOutlet var labelTemp: UILabel!
     
-    let font:UIFont? = UIFont(name: "Helvetica", size:17)
-    let fontSuper:UIFont? = UIFont(name: "Helvetica", size:10)
-//    let attString:NSMutableAttributedString = NSMutableAttributedString(string: "oF", attributes: [NSFontAttributeName:font!])
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //superscript value
+        let font:UIFont? = UIFont(name: "Helvetica", size:17)
+        let fontSuper:UIFont? = UIFont(name: "Helvetica", size:10)
+        let attString:NSMutableAttributedString = NSMutableAttributedString(string: "oF", attributes: [NSFontAttributeName:font!])
+        attString.setAttributes([NSFontAttributeName:fontSuper!,NSBaselineOffsetAttributeName:8], range: NSRange(location:0,length:1))
+        labelTemp.attributedText = attString;
     }
 
     override func didReceiveMemoryWarning() {
