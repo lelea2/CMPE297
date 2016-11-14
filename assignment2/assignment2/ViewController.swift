@@ -18,14 +18,26 @@ class ViewController: UIViewController {
     
     @IBOutlet var medicationField: UITextView!
     
+    @IBOutlet var btn1: UIButton!
+    
+    @IBOutlet var btn2: UIButton!
+    
     var uniqueFileName = "assigment2.archive"
     var dataFilePath: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //Load file check
-//        dataFilePath = fileInDocumentsDirectory(uniqueFileName)
-//        print(dataFilePath)
+        dataFilePath = fileInDocumentsDirectory(uniqueFileName)
+        print(dataFilePath)
+        btnStyle(btn1)
+        btnStyle(btn2)
+    }
+    
+    func btnStyle(btn : UIButton) {
+        btn.layer.cornerRadius = 10;
+        btn.layer.borderWidth = 4;
+        btn.layer.borderColor = UIColor.brownColor().CGColor
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,7 +73,10 @@ class ViewController: UIViewController {
     
     @IBAction func openArchiveBtn(sender: UIButton) {
         let dataArray = NSKeyedUnarchiver.unarchiveObjectWithFile(dataFilePath!) as! [String]
+        studentIdField.text = dataArray[0]
+        bloodGroupField.text = dataArray[1]
+        allergiesField.text = dataArray[2]
+        medicationField.text = dataArray[3]
     }
-    
 }
 

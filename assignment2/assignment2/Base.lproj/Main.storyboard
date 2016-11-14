@@ -53,17 +53,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="BPH-HO-vPM">
-                                <rect key="frame" x="207" y="507" width="140" height="66"/>
-                                <color key="backgroundColor" red="0.76748798080000002" green="0.32689702320000003" blue="0.23267428700000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Open from archive file">
-                                    <color key="titleColor" red="0.99775641029999995" green="0.99775641029999995" blue="0.99775641029999995" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="openArchiveBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Fp-rr-Sdw"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="t9c-bz-19o">
                                 <rect key="frame" x="44" y="507" width="138" height="66"/>
                                 <color key="backgroundColor" red="0.76748798076923075" green="0.32689702320609015" blue="0.2326742869939501" alpha="1" colorSpace="calibratedRGB"/>
@@ -96,6 +85,17 @@
                                 <color key="textColor" red="0.99775641029999995" green="0.99775641029999995" blue="0.99775641029999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="BPH-HO-vPM">
+                                <rect key="frame" x="214" y="507" width="140" height="66"/>
+                                <color key="backgroundColor" red="0.76748798080000002" green="0.32689702320000003" blue="0.23267428700000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Open from archive file">
+                                    <color key="titleColor" red="0.99775641029999995" green="0.99775641029999995" blue="0.99775641029999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openArchiveBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Fp-rr-Sdw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.39745769683791288" green="1" blue="0.65785808294093084" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -104,6 +104,8 @@
                     <connections>
                         <outlet property="allergiesField" destination="dq5-6k-9DX" id="bM7-hl-fjq"/>
                         <outlet property="bloodGroupField" destination="7OL-fG-MRr" id="Dzb-Oo-Fci"/>
+                        <outlet property="btn1" destination="t9c-bz-19o" id="Xef-wA-dwc"/>
+                        <outlet property="btn2" destination="BPH-HO-vPM" id="vuR-jJ-A8S"/>
                         <outlet property="medicationField" destination="v8X-Xj-ilP" id="IYA-Av-bn2"/>
                         <outlet property="studentIdField" destination="hfM-bx-lAX" id="gzE-wx-Iqs"/>
                     </connections>
