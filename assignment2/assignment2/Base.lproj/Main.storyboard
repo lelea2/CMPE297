@@ -83,19 +83,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" fixedFrame="YES" text="eHeath Cards -  Archives vs. Key archives" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="414" translatesAutoresizingMaskIntoConstraints="NO" id="KuA-8d-MVg">
-                                <rect key="frame" x="0.0" y="28" width="375" height="114"/>
-                                <color key="backgroundColor" red="0.045096161756609361" green="0.1134615384615385" blue="0.074641590179836417" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                <color key="textColor" red="0.99775641029999995" green="0.99775641029999995" blue="0.99775641029999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="v8X-Xj-ilP">
                                 <rect key="frame" x="108" y="369" width="247" height="103"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" fixedFrame="YES" text="eHeath Cards -  Archives vs. Key archives" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="414" translatesAutoresizingMaskIntoConstraints="NO" id="KuA-8d-MVg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
+                                <color key="backgroundColor" red="0.045096161756609361" green="0.1134615384615385" blue="0.074641590179836417" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <color key="textColor" red="0.99775641029999995" green="0.99775641029999995" blue="0.99775641029999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.39745769683791288" green="1" blue="0.65785808294093084" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -104,7 +104,6 @@
                     <connections>
                         <outlet property="allergiesField" destination="dq5-6k-9DX" id="bM7-hl-fjq"/>
                         <outlet property="bloodGroupField" destination="7OL-fG-MRr" id="Dzb-Oo-Fci"/>
-                        <outlet property="groupField" destination="7OL-fG-MRr" id="oYg-C2-gn8"/>
                         <outlet property="medicationField" destination="v8X-Xj-ilP" id="IYA-Av-bn2"/>
                         <outlet property="studentIdField" destination="hfM-bx-lAX" id="gzE-wx-Iqs"/>
                     </connections>
