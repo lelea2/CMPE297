@@ -32,6 +32,20 @@ class ViewController: UIViewController {
         print(dataFilePath)
         btnStyle(btn1)
         btnStyle(btn2)
+        textStyle(studentIdField)
+        textStyle(bloodGroupField)
+        textAreaStyle(allergiesField)
+        textAreaStyle(medicationField)
+    }
+    
+    func textStyle(input : UITextField) {
+        input.layer.borderWidth = 2
+        input.layer.borderColor = UIColor.blueColor().CGColor
+    }
+    
+    func textAreaStyle (input : UITextView) {
+        input.layer.borderWidth = 2
+        input.layer.borderColor = UIColor.blueColor().CGColor
     }
     
     func btnStyle(btn : UIButton) {
