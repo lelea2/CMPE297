@@ -28,12 +28,18 @@ class ViewController: UIViewController {
         let str = bookNameField.text! + ", " + authorField.text! + ", " + descField.text!
         return str
     }
-    
-    @IBAction func saveStorage(sender: UIButton) {
+
+    func getDocDirectory() -> NSURL {
         // get the documents folder url
         let documentDirectoryURL = try! NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: true)
-        // create the destination url for the text file to be saved
-        let fileDestinationUrl = documentDirectoryURL.URLByAppendingPathComponent("Assigment3.txt")        
+        return documentDirectoryURL
+    }
+
+    @IBAction func saveStorage(sender: UIButton) {
+        // get the documents folder url
+        let documentDirectoryURL = getDocDirectory() // create the destination url for the text file to be saved
+        let fileDestinationUrl = documentDirectoryURL.URLByAppendingPathComponent("Assigment3_FileManager.txt")
+        print(fileDestinationUrl.path!) //print file path
         let text = generateString()
         
         do {
@@ -57,7 +63,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func saveArchive(sender: UIButton) {
-        
+        let documentDirectoryURL = getDocDirectory() // create the destination url for the text file to be saved
+        let fileDestinationUrl = documentDirectoryURL.URLByAppendingPathComponent("Assigment3_Archive.txt").path!
+        print(fileDestinationUrl) //print file path
+        let text = generateString()
+        NSKeyedArchiver.archiveRootObject(text, toFile: fileDestinationUrl)
     }
     
 }
