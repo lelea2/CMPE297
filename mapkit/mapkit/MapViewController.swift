@@ -25,6 +25,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -39,11 +40,10 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         if (!toPlace.isEmpty) {
             places.append(toPlace)
         }
-        print(places.count)
-        mapPlot(places) //Map plots
-
-        if showType == "route" {
-            
+        if showType == "map" {
+            mapPlot(places, polyline: false) //Map plots
+        } else if showType == "route" {
+            mapPlot(places, polyline: true) //Map plots
         }
     }
 
@@ -54,15 +54,16 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
 
     //Helper function to map plot on map
-    func mapPlot(places:[String]) {
+    func mapPlot(places:[String], polyline:Bool) {
         var i = 1
         var coordinates: CLLocationCoordinate2D?
         var placemark: CLPlacemark?
         var annotation: Station?
         var stations:Array = [Station]()
+        var points: [CLLocationCoordinate2D] = [CLLocationCoordinate2D]()
 
         for address in places {
-//            geocoder = CLGeocoder() //new geocoder
+            geocoder = CLGeocoder() //new geocoder
             geocoder.geocodeAddressString(address, completionHandler: {(placemarks, error) -> Void in
                 if((error) != nil)  {
                     print("Error", error)
@@ -70,18 +71,36 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 placemark = placemarks?.first
                 if placemark != nil {
                     coordinates = placemark!.location!.coordinate
+                    points.append(coordinates!)
                     print("locations = \(coordinates!.latitude) \(coordinates!.longitude)")
                     annotation = Station(latitude: coordinates!.latitude, longitude: coordinates!.longitude, address: address)
                     stations.append(annotation!)
+                    print(stations.count)
+                    print(i)
                     if (i == self.places.count) {
+                        print("Print map...")
                         self.mapView.addAnnotations(stations)
-//                        let region = MKCoordinateRegionMakeWithDistance(coordinates!, 5000.0, 7000.0)
+//                        let region = MKCoordinateRegionMakeWithDistance(coordinates!, 7000.0, 7000.0)
 //                        self.mapView.setRegion(region, animated: true)
+                        if (polyline == true) { //If draw polyline is true
+                            let line = MKPolyline(coordinates: &points, count: points.count)
+                            self.mapView.addOverlay(line)
+                        }
                     }
                     i++
                 }
             })
         }
+    }
+
+    func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer! {
+        if overlay is MKPolyline {
+            var polylineRenderer = MKPolylineRenderer(overlay: overlay)
+            polylineRenderer.strokeColor = UIColor.blueColor()
+            polylineRenderer.lineWidth = 5
+            return polylineRenderer
+        }
+        return MKPolylineRenderer()
     }
 
     class Station: NSObject, MKAnnotation {
