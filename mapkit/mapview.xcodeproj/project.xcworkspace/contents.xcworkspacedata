@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:mapkit.xcodeproj">
+      location = "self:/Users/kdao/School/CMPE297/mapkit/mapview.xcodeproj">
    </FileRef>
 </Workspace>
