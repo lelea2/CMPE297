@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import mapkit
+@testable import mapview
 
 class mapkitTests: XCTestCase {
     

@@ -17,12 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map Kit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0v9-vP-9H8">
-                                <rect key="frame" x="110" y="40" width="154" height="21"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="84Q-8V-Vaq">
                                 <rect key="frame" x="9" y="107" width="357" height="179"/>
                                 <subviews>
@@ -66,13 +60,13 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZKy-ih-9uz">
-                                        <rect key="frame" x="127" y="27" width="222" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pxe-Hv-ZUw">
+                                        <rect key="frame" x="282" y="67" width="67" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pxe-Hv-ZUw">
-                                        <rect key="frame" x="282" y="67" width="67" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZKy-ih-9uz">
+                                        <rect key="frame" x="127" y="27" width="222" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -141,7 +135,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Map"/>
                                 <connections>
-                                    <segue destination="o2s-Cw-MsN" kind="show" id="6h8-J1-SyH"/>
+                                    <segue destination="o2s-Cw-MsN" kind="show" identifier="ShowMap" id="6h8-J1-SyH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCt-gM-6rC">
@@ -150,13 +144,29 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Route"/>
                                 <connections>
-                                    <segue destination="o2s-Cw-MsN" kind="show" id="8Af-wE-3Zb"/>
+                                    <segue destination="o2s-Cw-MsN" kind="show" identifier="ShowRoute" id="8Af-wE-3Zb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map Kit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0v9-vP-9H8">
+                                <rect key="frame" x="110" y="40" width="154" height="21"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.065501915970881369" green="0.032222573199861916" blue="0.39443108974358976" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="fromAddress" destination="ZKy-ih-9uz" id="POY-Dm-tMN"/>
+                        <outlet property="fromCity" destination="McZ-X2-PEw" id="mki-bs-arR"/>
+                        <outlet property="fromState" destination="Pxe-Hv-ZUw" id="mHt-oX-C4C"/>
+                        <outlet property="fromZip" destination="v7q-eJ-Vq7" id="WOr-0g-9gA"/>
+                        <outlet property="toAddress" destination="yLq-RX-Ima" id="gcg-Wz-b2D"/>
+                        <outlet property="toCity" destination="n7g-Oe-T4F" id="g9I-GV-ePN"/>
+                        <outlet property="toState" destination="eiW-QP-5BY" id="7wg-zf-n6C"/>
+                        <outlet property="toZip" destination="nBu-Lb-toO" id="MDh-2i-k73"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,7 +195,7 @@
                                     <color key="titleColor" red="0.94224759619999998" green="0.93518751109999998" blue="0.34892564349999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="zKM-Y5-zVm"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowForm" id="zKM-Y5-zVm"/>
                                 </connections>
                             </button>
                         </subviews>
