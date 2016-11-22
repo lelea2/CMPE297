@@ -22,6 +22,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let url :NSURL? = NSFileManager.defaultManager().URLForUbiquityContainerIdentifier(nil)
+        print(url)
         iCloudSwitch.on = true
         iCloudSetUp()
     }

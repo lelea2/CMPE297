@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  icloud
+//  coremotion
 //
-//  Created by Dao, Khanh on 11/17/16.
+//  Created by Dao, Khanh on 11/22/16.
 //  Copyright © 2016 cmpe297. All rights reserved.
 //
 
@@ -11,11 +11,14 @@ import Darwin
 
 class ViewController: UIViewController {
 
+    @IBOutlet var stepCount: UILabel!
+    @IBOutlet var ascFloor: UILabel!
+    @IBOutlet var descFloor: UILabel!
+    @IBOutlet var distance: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let url :NSURL? = NSFileManager.defaultManager().URLForUbiquityContainerIdentifier(nil)
-        print(url)
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,8 +27,15 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func startBtn(sender: UIButton) {
+    }
+
+
+    @IBAction func stopBtn(sender: UIButton) {
+    }
+
+
     @IBAction func closeBtn(sender: UIButton) {
-        exit(0);
+        exit(0)
     }
 }
-

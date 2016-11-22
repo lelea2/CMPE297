@@ -35,6 +35,17 @@
                                     <segue destination="paa-tn-oNg" kind="show" id="xMz-Sp-OPV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtN-dS-zrq">
+                                <rect key="frame" x="143" y="521" width="88" height="39"/>
+                                <color key="backgroundColor" red="0.093941523880000002" green="0.046212963160000002" blue="0.56568509619999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rE7-oh-oHs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.76748798080000002" green="0.32689702320000003" blue="0.23267428700000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
