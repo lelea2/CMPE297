@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var shouldDetect = false;
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,10 +24,12 @@ class ViewController: UIViewController {
 
 
     @IBAction func startBtn(sender: UIButton) {
+        shouldDetect = true
     }
 
 
     @IBAction func stopBtn(sender: UIButton) {
+        shouldDetect = false
     }
 
 }
