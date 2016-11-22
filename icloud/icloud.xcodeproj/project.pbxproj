@@ -14,6 +14,7 @@
 		6D4497591DDE311B0069F3C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D4497571DDE311B0069F3C4 /* LaunchScreen.storyboard */; };
 		6D4497641DDE311B0069F3C4 /* icloudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4497631DDE311B0069F3C4 /* icloudTests.swift */; };
 		6D44976F1DDE311B0069F3C4 /* icloudUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D44976E1DDE311B0069F3C4 /* icloudUITests.swift */; };
+		6DF031DF1DE3D6220006AC50 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF031DE1DE3D6220006AC50 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		6D44976A1DDE311B0069F3C4 /* icloudUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = icloudUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D44976E1DDE311B0069F3C4 /* icloudUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icloudUITests.swift; sourceTree = "<group>"; };
 		6D4497701DDE311B0069F3C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DF031DB1DE3D4920006AC50 /* icloud.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = icloud.entitlements; sourceTree = "<group>"; };
+		6DF031DE1DE3D6220006AC50 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DF031DF1DE3D6220006AC50 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +81,7 @@
 		6D4497421DDE311B0069F3C4 = {
 			isa = PBXGroup;
 			children = (
+				6DF031DE1DE3D6220006AC50 /* CloudKit.framework */,
 				6D44974D1DDE311B0069F3C4 /* icloud */,
 				6D4497621DDE311B0069F3C4 /* icloudTests */,
 				6D44976D1DDE311B0069F3C4 /* icloudUITests */,
@@ -97,6 +102,7 @@
 		6D44974D1DDE311B0069F3C4 /* icloud */ = {
 			isa = PBXGroup;
 			children = (
+				6DF031DB1DE3D4920006AC50 /* icloud.entitlements */,
 				6D44974E1DDE311B0069F3C4 /* AppDelegate.swift */,
 				6D4497501DDE311B0069F3C4 /* ViewController.swift */,
 				6D4497521DDE311B0069F3C4 /* Main.storyboard */,
@@ -193,7 +199,12 @@
 				TargetAttributes = {
 					6D44974A1DDE311B0069F3C4 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 8PUZK37M75;
+						DevelopmentTeam = 6Z65K99J89;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					6D44975E1DDE311B0069F3C4 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -400,10 +411,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = icloud/icloud.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = icloud/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.icloud;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.icloudtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -411,10 +427,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = icloud/icloud.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = icloud/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.icloud;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.icloudtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -485,6 +506,7 @@
 				6D4497751DDE311B0069F3C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D4497761DDE311B0069F3C4 /* Build configuration list for PBXNativeTarget "icloudTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +515,7 @@
 				6D4497781DDE311B0069F3C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D4497791DDE311B0069F3C4 /* Build configuration list for PBXNativeTarget "icloudUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +524,7 @@
 				6D44977B1DDE311B0069F3C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
