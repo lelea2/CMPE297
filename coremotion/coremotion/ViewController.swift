@@ -8,6 +8,8 @@
 
 import UIKit
 import Darwin
+import CoreMotion
+
 
 class ViewController: UIViewController {
 
@@ -15,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet var ascFloor: UILabel!
     @IBOutlet var descFloor: UILabel!
     @IBOutlet var distance: UILabel!
+    var shouldDetect = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +31,12 @@ class ViewController: UIViewController {
 
 
     @IBAction func startBtn(sender: UIButton) {
+        shouldDetect = true
     }
 
 
     @IBAction func stopBtn(sender: UIButton) {
+        shouldDetect = false
     }
 
 

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6DE2CD1B1DE4FBE9009E9732"
-               BuildableName = "coremotion.app"
-               BlueprintName = "coremotion"
-               ReferencedContainer = "container:coremotion.xcodeproj">
+               BuildableName = "stepcount.app"
+               BlueprintName = "stepcount"
+               ReferencedContainer = "container:stepcount.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6DE2CD2F1DE4FBE9009E9732"
-               BuildableName = "coremotionTests.xctest"
-               BlueprintName = "coremotionTests"
-               ReferencedContainer = "container:coremotion.xcodeproj">
+               BuildableName = "stepcount.xctest"
+               BlueprintName = "stepcountTests"
+               ReferencedContainer = "container:stepcount.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6DE2CD3A1DE4FBE9009E9732"
-               BuildableName = "coremotionUITests.xctest"
-               BlueprintName = "coremotionUITests"
-               ReferencedContainer = "container:coremotion.xcodeproj">
+               BuildableName = "stepcount.xctest"
+               BlueprintName = "stepcountUITests"
+               ReferencedContainer = "container:stepcount.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DE2CD1B1DE4FBE9009E9732"
-            BuildableName = "coremotion.app"
-            BlueprintName = "coremotion"
-            ReferencedContainer = "container:coremotion.xcodeproj">
+            BuildableName = "stepcount.app"
+            BlueprintName = "stepcount"
+            ReferencedContainer = "container:stepcount.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DE2CD1B1DE4FBE9009E9732"
-            BuildableName = "coremotion.app"
-            BlueprintName = "coremotion"
-            ReferencedContainer = "container:coremotion.xcodeproj">
+            BuildableName = "stepcount.app"
+            BlueprintName = "stepcount"
+            ReferencedContainer = "container:stepcount.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6DE2CD1B1DE4FBE9009E9732"
-            BuildableName = "coremotion.app"
-            BlueprintName = "coremotion"
-            ReferencedContainer = "container:coremotion.xcodeproj">
+            BuildableName = "stepcount.app"
+            BlueprintName = "stepcount"
+            ReferencedContainer = "container:stepcount.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

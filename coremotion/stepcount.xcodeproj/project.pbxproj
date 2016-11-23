@@ -35,17 +35,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6DE2CD1C1DE4FBE9009E9732 /* coremotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coremotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DE2CD1C1DE4FBE9009E9732 /* stepcount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stepcount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE2CD1F1DE4FBE9009E9732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DE2CD211DE4FBE9009E9732 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6DE2CD241DE4FBE9009E9732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6DE2CD261DE4FBE9009E9732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DE2CD291DE4FBE9009E9732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DE2CD2B1DE4FBE9009E9732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6DE2CD301DE4FBE9009E9732 /* coremotionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coremotionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DE2CD301DE4FBE9009E9732 /* stepcount.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stepcount.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE2CD341DE4FBE9009E9732 /* coremotionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coremotionTests.swift; sourceTree = "<group>"; };
 		6DE2CD361DE4FBE9009E9732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6DE2CD3B1DE4FBE9009E9732 /* coremotionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coremotionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DE2CD3B1DE4FBE9009E9732 /* stepcount.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = stepcount.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DE2CD3F1DE4FBE9009E9732 /* coremotionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coremotionUITests.swift; sourceTree = "<group>"; };
 		6DE2CD411DE4FBE9009E9732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DE2CD4D1DE4FBFC009E9732 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
@@ -92,9 +92,9 @@
 		6DE2CD1D1DE4FBE9009E9732 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6DE2CD1C1DE4FBE9009E9732 /* coremotion.app */,
-				6DE2CD301DE4FBE9009E9732 /* coremotionTests.xctest */,
-				6DE2CD3B1DE4FBE9009E9732 /* coremotionUITests.xctest */,
+				6DE2CD1C1DE4FBE9009E9732 /* stepcount.app */,
+				6DE2CD301DE4FBE9009E9732 /* stepcount.xctest */,
+				6DE2CD3B1DE4FBE9009E9732 /* stepcount.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,9 +134,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6DE2CD1B1DE4FBE9009E9732 /* coremotion */ = {
+		6DE2CD1B1DE4FBE9009E9732 /* stepcount */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DE2CD441DE4FBE9009E9732 /* Build configuration list for PBXNativeTarget "coremotion" */;
+			buildConfigurationList = 6DE2CD441DE4FBE9009E9732 /* Build configuration list for PBXNativeTarget "stepcount" */;
 			buildPhases = (
 				6DE2CD181DE4FBE9009E9732 /* Sources */,
 				6DE2CD191DE4FBE9009E9732 /* Frameworks */,
@@ -146,14 +146,14 @@
 			);
 			dependencies = (
 			);
-			name = coremotion;
+			name = stepcount;
 			productName = coremotion;
-			productReference = 6DE2CD1C1DE4FBE9009E9732 /* coremotion.app */;
+			productReference = 6DE2CD1C1DE4FBE9009E9732 /* stepcount.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6DE2CD2F1DE4FBE9009E9732 /* coremotionTests */ = {
+		6DE2CD2F1DE4FBE9009E9732 /* stepcountTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DE2CD471DE4FBE9009E9732 /* Build configuration list for PBXNativeTarget "coremotionTests" */;
+			buildConfigurationList = 6DE2CD471DE4FBE9009E9732 /* Build configuration list for PBXNativeTarget "stepcountTests" */;
 			buildPhases = (
 				6DE2CD2C1DE4FBE9009E9732 /* Sources */,
 				6DE2CD2D1DE4FBE9009E9732 /* Frameworks */,
@@ -164,14 +164,14 @@
 			dependencies = (
 				6DE2CD321DE4FBE9009E9732 /* PBXTargetDependency */,
 			);
-			name = coremotionTests;
+			name = stepcountTests;
 			productName = coremotionTests;
-			productReference = 6DE2CD301DE4FBE9009E9732 /* coremotionTests.xctest */;
+			productReference = 6DE2CD301DE4FBE9009E9732 /* stepcount.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6DE2CD3A1DE4FBE9009E9732 /* coremotionUITests */ = {
+		6DE2CD3A1DE4FBE9009E9732 /* stepcountUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6DE2CD4A1DE4FBE9009E9732 /* Build configuration list for PBXNativeTarget "coremotionUITests" */;
+			buildConfigurationList = 6DE2CD4A1DE4FBE9009E9732 /* Build configuration list for PBXNativeTarget "stepcountUITests" */;
 			buildPhases = (
 				6DE2CD371DE4FBE9009E9732 /* Sources */,
 				6DE2CD381DE4FBE9009E9732 /* Frameworks */,
@@ -182,9 +182,9 @@
 			dependencies = (
 				6DE2CD3D1DE4FBE9009E9732 /* PBXTargetDependency */,
 			);
-			name = coremotionUITests;
+			name = stepcountUITests;
 			productName = coremotionUITests;
-			productReference = 6DE2CD3B1DE4FBE9009E9732 /* coremotionUITests.xctest */;
+			productReference = 6DE2CD3B1DE4FBE9009E9732 /* stepcount.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +216,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6DE2CD171DE4FBE9009E9732 /* Build configuration list for PBXProject "coremotion" */;
+			buildConfigurationList = 6DE2CD171DE4FBE9009E9732 /* Build configuration list for PBXProject "stepcount" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -229,9 +229,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6DE2CD1B1DE4FBE9009E9732 /* coremotion */,
-				6DE2CD2F1DE4FBE9009E9732 /* coremotionTests */,
-				6DE2CD3A1DE4FBE9009E9732 /* coremotionUITests */,
+				6DE2CD1B1DE4FBE9009E9732 /* stepcount */,
+				6DE2CD2F1DE4FBE9009E9732 /* stepcountTests */,
+				6DE2CD3A1DE4FBE9009E9732 /* stepcountUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -294,12 +294,12 @@
 /* Begin PBXTargetDependency section */
 		6DE2CD321DE4FBE9009E9732 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6DE2CD1B1DE4FBE9009E9732 /* coremotion */;
+			target = 6DE2CD1B1DE4FBE9009E9732 /* stepcount */;
 			targetProxy = 6DE2CD311DE4FBE9009E9732 /* PBXContainerItemProxy */;
 		};
 		6DE2CD3D1DE4FBE9009E9732 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6DE2CD1B1DE4FBE9009E9732 /* coremotion */;
+			target = 6DE2CD1B1DE4FBE9009E9732 /* stepcount */;
 			targetProxy = 6DE2CD3C1DE4FBE9009E9732 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -415,7 +415,7 @@
 				INFOPLIST_FILE = coremotion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.coremotion;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = stepcount;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -430,7 +430,7 @@
 				INFOPLIST_FILE = coremotion/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.coremotion;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = stepcount;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -442,8 +442,8 @@
 				INFOPLIST_FILE = coremotionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.coremotionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/coremotion.app/coremotion";
+				PRODUCT_NAME = stepcount;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stepcount.app/stepcount";
 			};
 			name = Debug;
 		};
@@ -454,8 +454,8 @@
 				INFOPLIST_FILE = coremotionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.coremotionTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/coremotion.app/coremotion";
+				PRODUCT_NAME = stepcount;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stepcount.app/stepcount";
 			};
 			name = Release;
 		};
@@ -465,7 +465,7 @@
 				INFOPLIST_FILE = coremotionUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.coremotionUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = stepcount;
 				TEST_TARGET_NAME = coremotion;
 				USES_XCTRUNNER = YES;
 			};
@@ -477,7 +477,7 @@
 				INFOPLIST_FILE = coremotionUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.coremotionUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = stepcount;
 				TEST_TARGET_NAME = coremotion;
 				USES_XCTRUNNER = YES;
 			};
@@ -486,7 +486,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6DE2CD171DE4FBE9009E9732 /* Build configuration list for PBXProject "coremotion" */ = {
+		6DE2CD171DE4FBE9009E9732 /* Build configuration list for PBXProject "stepcount" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DE2CD421DE4FBE9009E9732 /* Debug */,
@@ -495,29 +495,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6DE2CD441DE4FBE9009E9732 /* Build configuration list for PBXNativeTarget "coremotion" */ = {
+		6DE2CD441DE4FBE9009E9732 /* Build configuration list for PBXNativeTarget "stepcount" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DE2CD451DE4FBE9009E9732 /* Debug */,
 				6DE2CD461DE4FBE9009E9732 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		6DE2CD471DE4FBE9009E9732 /* Build configuration list for PBXNativeTarget "coremotionTests" */ = {
+		6DE2CD471DE4FBE9009E9732 /* Build configuration list for PBXNativeTarget "stepcountTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DE2CD481DE4FBE9009E9732 /* Debug */,
 				6DE2CD491DE4FBE9009E9732 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		6DE2CD4A1DE4FBE9009E9732 /* Build configuration list for PBXNativeTarget "coremotionUITests" */ = {
+		6DE2CD4A1DE4FBE9009E9732 /* Build configuration list for PBXNativeTarget "stepcountUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6DE2CD4B1DE4FBE9009E9732 /* Debug */,
 				6DE2CD4C1DE4FBE9009E9732 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
