@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        loadData()
         if !isIcloudAvailable() {
             print("iCloud is not available")
             displayAlertWithTitle("iCloud", message: "iCloud is not available." +
@@ -40,6 +40,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //    callData.setObject(reasonText.text!, forKey: "reason")
 //    callData.setObject(descText.text!, forKey: "description")
     func loadData() {
+        print("Loading data...")
         let pred = NSPredicate(value: true)
         let query = CKQuery(recordType: "CallData", predicate: pred)
         let operation = CKQueryOperation(query: query)
@@ -61,28 +62,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
             }
         }
+        CKContainer.defaultContainer().publicCloudDatabase.addOperation(operation)
     }
 
     //Function for table
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: <#T##NSIndexPath#>) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", forIndexPath: indexPath)
-        cell.accessoryType = .disclosureIndicator
-        cell.textLable?.text = callDatas[indexPath.row].name
-        cell.textLabel?.numberOfLines = 1
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        cell.textLabel?.text = callDatas[indexPath.row].name
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(self.callDatas.count)
         return self.callDatas.count
     }
 
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(tableView: UITableView, estimatedHeightForRowAt indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
 
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(tableView: UITableView, heightForRowAt indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
+
     //End function for table
 
     override func didReceiveMemoryWarning() {
