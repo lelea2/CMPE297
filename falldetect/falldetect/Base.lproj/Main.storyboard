@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlK-hq-lpe">
-                                <rect key="frame" x="212" y="278" width="115" height="44.5"/>
+                                <rect key="frame" x="212" y="278" width="115" height="45"/>
                                 <color key="backgroundColor" red="0.66596554490000004" green="0.052415234009999999" blue="0.080604510709999994" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Stop Detect">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
