@@ -6,6 +6,8 @@
 //  Copyright © 2016 cmpe297. All rights reserved.
 //
 
+import Foundation
+import Dispatch
 import UIKit
 import Darwin
 import CloudKit
@@ -13,6 +15,7 @@ import CloudKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let database = CKContainer.defaultContainer().publicCloudDatabase //store public cloud
+    var callDatas = [CallData]()
 
     @IBOutlet var tableView: UITableView!
 
@@ -20,6 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         if !isIcloudAvailable() {
             print("iCloud is not available")
             displayAlertWithTitle("iCloud", message: "iCloud is not available." +
@@ -36,21 +40,48 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //    callData.setObject(reasonText.text!, forKey: "reason")
 //    callData.setObject(descText.text!, forKey: "description")
     func loadData() {
-
+        let pred = NSPredicate(value: true)
+        let query = CKQuery(recordType: "CallData", predicate: pred)
+        let operation = CKQueryOperation(query: query)
+        var newData = [CallData]()
+        operation.desiredKeys = ["name"]
+        operation.resultsLimit = 50
+        operation.recordFetchedBlock = { record in
+            let data = CallData()
+            data.name = record["name"] as! String
+            newData.append(data)
+        }
+        operation.queryCompletionBlock = { [unowned self] (cursor, error) in
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+                if error == nil {
+                    self.callDatas = newData
+                    self.tableView.reloadData()
+                } else {
+                    print("Fail to fetch")
+                }
+            }
+        }
     }
 
     //Function for table
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0 // your number of cell here
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: <#T##NSIndexPath#>) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", forIndexPath: indexPath)
+        cell.accessoryType = .disclosureIndicator
+        cell.textLable?.text = callDatas[indexPath.row].name
+        cell.textLabel?.numberOfLines = 1
+        return cell
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        // your cell coding
-        return UITableViewCell()
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.callDatas.count
     }
 
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // cell selected code here
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     //End function for table
 
@@ -84,5 +115,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     @IBAction func closeBtn(sender: UIButton) {
         exit(0);
+    }
+
+    //Default calldata class
+    class CallData: NSObject {
+        var name: String!
     }
 }
