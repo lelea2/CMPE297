@@ -18,10 +18,21 @@ class ViewController: UIViewController {
     @IBOutlet var descFloor: UILabel!
     @IBOutlet var distance: UILabel!
     var shouldDetect = false
+    let activityManager = CMMotionActivityManager()
+    let pedoMeter = CMPedometer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+//        let cal = NSCalendar.currentCalendar()
+//        var comps = cal.components(NSCalendarUnit.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit | .HourCalendarUnit | .MinuteCalendarUnit | .SecondCalendarUnit, fromDate: NSDate())
+//        comps.hour = 0
+//        comps.minute = 0
+//        comps.second = 0
+//        let timeZone = NSTimeZone.systemTimeZone()
+//        cal.timeZone = timeZone
+
+        let midnightOfToday = cal.dateFromComponents(comps)!
+
     }
 
     override func didReceiveMemoryWarning() {
