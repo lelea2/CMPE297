@@ -31,7 +31,7 @@ class ViewController: UIViewController {
 //        let timeZone = NSTimeZone.systemTimeZone()
 //        cal.timeZone = timeZone
 
-        let midnightOfToday = cal.dateFromComponents(comps)!
+//        let midnightOfToday = cal.dateFromComponents(comps)!
 
     }
 
@@ -41,17 +41,17 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func startBtn(sender: UIButton) {
+    @IBAction func startBtn(_ sender: UIButton) {
         shouldDetect = true
     }
 
 
-    @IBAction func stopBtn(sender: UIButton) {
+    @IBAction func stopBtn(_ sender: UIButton) {
         shouldDetect = false
     }
 
 
-    @IBAction func closeBtn(sender: UIButton) {
+    @IBAction func closeBtn(_ sender: UIButton) {
         exit(0)
     }
 }

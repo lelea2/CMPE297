@@ -200,6 +200,7 @@
 					6DE2CD1B1DE4FBE9009E9732 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 6Z65K99J89;
+						LastSwiftMigration = 0810;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
 								enabled = 1;
@@ -208,10 +209,12 @@
 					};
 					6DE2CD2F1DE4FBE9009E9732 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 6DE2CD1B1DE4FBE9009E9732;
 					};
 					6DE2CD3A1DE4FBE9009E9732 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 6DE2CD1B1DE4FBE9009E9732;
 					};
 				};
@@ -417,6 +420,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.coremotion;
 				PRODUCT_NAME = stepcount;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -432,6 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.coremotion;
 				PRODUCT_NAME = stepcount;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -443,6 +448,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.coremotionTests;
 				PRODUCT_NAME = stepcount;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stepcount.app/stepcount";
 			};
 			name = Debug;
@@ -455,6 +461,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.coremotionTests;
 				PRODUCT_NAME = stepcount;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stepcount.app/stepcount";
 			};
 			name = Release;
@@ -466,6 +473,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.coremotionUITests;
 				PRODUCT_NAME = stepcount;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = coremotion;
 				USES_XCTRUNNER = YES;
 			};
@@ -478,6 +486,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.coremotionUITests;
 				PRODUCT_NAME = stepcount;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = coremotion;
 				USES_XCTRUNNER = YES;
 			};
