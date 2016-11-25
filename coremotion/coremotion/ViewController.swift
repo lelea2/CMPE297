@@ -53,7 +53,9 @@ class ViewController: UIViewController {
                         self.ascFloor.text = "\(data.floorsAscended!)"
                     self.descFloor.text = "\(data.floorsDescended!)"
                     self.stepCount.text = "\(data.numberOfSteps)"
-                        self.distance.text = "\(data.distance!)"
+                    var distance = data.distance?.doubleValue
+                    distance = Double(round(100 * distance!) / 100)
+                        self.distance.text = "\(distance!)"
     //                    self.distance.text = "\(self.stringFromMeters(data.distance as! Double))"
 //                    })
                 }
