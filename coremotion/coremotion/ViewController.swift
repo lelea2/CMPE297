@@ -48,7 +48,7 @@ class ViewController: UIViewController {
                 } else {
                     print("Start counting...")
                     print(data)
-//                    DispatchQueue.main.async(execute: { () -> Void in
+                    DispatchQueue.main.async(execute: { () -> Void in
                         print("testing")
                         self.ascFloor.text = "\(data.floorsAscended!)"
                     self.descFloor.text = "\(data.floorsDescended!)"
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
                     distance = Double(round(100 * distance!) / 100)
                         self.distance.text = "\(distance!)"
     //                    self.distance.text = "\(self.stringFromMeters(data.distance as! Double))"
-//                    })
+                    })
                 }
             })
         } else {
