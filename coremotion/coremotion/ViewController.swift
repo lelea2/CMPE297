@@ -23,16 +23,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let cal = NSCalendar.currentCalendar()
-//        var comps = cal.components(NSCalendarUnit.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit | .HourCalendarUnit | .MinuteCalendarUnit | .SecondCalendarUnit, fromDate: NSDate())
-//        comps.hour = 0
-//        comps.minute = 0
-//        comps.second = 0
-//        let timeZone = NSTimeZone.systemTimeZone()
-//        cal.timeZone = timeZone
-
-//        let midnightOfToday = cal.dateFromComponents(comps)!
-
+        countStep()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +31,22 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    //Helper function to count step
+    func countStep() {
+        if CMPedometer.isStepCountingAvailable() {
+            pedoMeter.startUpdates(from: NSDate() as Date, withHandler: {
+                data, error in
+                guard let data = data else {
+                    return
+                }
+                print("Number of steps = \(data.numberOfSteps)")
+              self.stepCount.text = (data.numberOfSteps.stringValue)
+            })
+        } else {
+            print("Step counting is not available")
+        }
+    }
+    
     @IBAction func startBtn(_ sender: UIButton) {
         shouldDetect = true
     }
