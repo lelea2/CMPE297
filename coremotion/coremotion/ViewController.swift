@@ -17,9 +17,16 @@ class ViewController: UIViewController {
     @IBOutlet var ascFloor: UILabel!
     @IBOutlet var descFloor: UILabel!
     @IBOutlet var distance: UILabel!
+    
     var shouldDetect = false
     let activityManager = CMMotionActivityManager()
     let pedoMeter = CMPedometer()
+    
+    var days:[String] = []
+    var stepsTaken:[Int] = []
+    
+    let lengthFormatter = LengthFormatter()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,18 +40,20 @@ class ViewController: UIViewController {
 
     //Helper function to count step
     func countStep() {
-        if CMPedometer.isStepCountingAvailable() {
-            pedoMeter.startUpdates(from: NSDate() as Date, withHandler: {
-                data, error in
-                guard let data = data else {
-                    return
-                }
-                print("Number of steps = \(data.numberOfSteps)")
-              self.stepCount.text = (data.numberOfSteps.stringValue)
-            })
-        } else {
-            print("Step counting is not available")
+        pedoMeter.startUpdates(from: NSDate() as Date) {
+            (data, error) in
+            if error != nil {
+                print("There was an error obtaining pedometer data: \(error)")
+            } else {
+                DispatchQueue.main.async(execute: { () -> Void in
+                    print("Test")
+                    self.ascFloor.text = "\(data?.floorsAscended)"
+                    self.stepCount.text = "\(data?.numberOfSteps)"
+//                    self.distance.text = "\(self.stringFromMeters(data.distance as! Double))"
+                })
+            }
         }
+        
     }
     
     @IBAction func startBtn(_ sender: UIButton) {
