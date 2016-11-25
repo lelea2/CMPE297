@@ -26,30 +26,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         countMotion()
-//        motionManager.startAccelerometerUpdates()
-//        motionManager.startGyroUpdates()
-//        motionManager.startMagnetometerUpdates()
-//        motionManager.startDeviceMotionUpdates()
-//        
-//        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(ViewController.update), userInfo: nil, repeats: true)
     }
     
-    
-//    func update() {
-//        if let accelerometerData = motionManager.accelerometerData {
-//            print(accelerometerData)
-//        }
-//        if let gyroData = motionManager.gyroData {
-//            print(gyroData)
-//        }
-//        if let magnetometerData = motionManager.magnetometerData {
-//            print(magnetometerData)
-//        }
-//        if let deviceMotion = motionManager.deviceMotion {
-//            print(deviceMotion)
-//        }
-//    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -72,9 +50,10 @@ class ViewController: UIViewController {
                     print(data)
 //                    DispatchQueue.main.async(execute: { () -> Void in
                         print("testing")
-                        self.ascFloor.text = "\(data.floorsAscended)"
-                        //self.descFloor.text = "\(data?.floorsDescended)"
-                        self.stepCount.text = "\(data.numberOfSteps)"
+                        self.ascFloor.text = "\(data.floorsAscended!)"
+                    self.descFloor.text = "\(data.floorsDescended!)"
+                    self.stepCount.text = "\(data.numberOfSteps)"
+                        self.distance.text = "\(data.distance!)"
     //                    self.distance.text = "\(self.stringFromMeters(data.distance as! Double))"
 //                    })
                 }
