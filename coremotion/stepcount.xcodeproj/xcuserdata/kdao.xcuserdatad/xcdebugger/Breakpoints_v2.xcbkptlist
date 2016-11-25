@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "coremotion/ViewController.swift"
-            timestampString = "501756491.47542"
+            timestampString = "501784236.119857"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "didReceiveMemoryWarning()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "coremotion/ViewController.swift"
-            timestampString = "501782706.99258"
+            timestampString = "501784407.288503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "countStep()"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "countMotion()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "coremotion/ViewController.swift"
-            timestampString = "501782706.99258"
+            timestampString = "501784407.288503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "countStep()"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "countMotion()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "coremotion/ViewController.swift"
-            timestampString = "501782706.99258"
+            timestampString = "501784407.288503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "countStep()"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "countMotion()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -74,12 +74,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "coremotion/ViewController.swift"
-            timestampString = "501782706.99258"
+            timestampString = "501784407.288503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "countStep()"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "countMotion()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -90,12 +90,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "coremotion/ViewController.swift"
-            timestampString = "501782706.99258"
+            timestampString = "501784407.288503"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "countStep()"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "countMotion()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
