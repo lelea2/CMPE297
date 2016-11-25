@@ -19,20 +19,36 @@ class ViewController: UIViewController {
     @IBOutlet var distance: UILabel!
     
     var shouldDetect = false
-    let activityManager = CMMotionActivityManager()
+    let motionManager = CMMotionManager()
+    var timer: Timer!
     let pedoMeter = CMPedometer()
     
-    var days:[String] = []
-    var stepsTaken:[Int] = []
-    
-    let lengthFormatter = LengthFormatter()
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("testing")
         countMotion()
+//        motionManager.startAccelerometerUpdates()
+//        motionManager.startGyroUpdates()
+//        motionManager.startMagnetometerUpdates()
+//        motionManager.startDeviceMotionUpdates()
+//        
+//        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(ViewController.update), userInfo: nil, repeats: true)
     }
+    
+    
+//    func update() {
+//        if let accelerometerData = motionManager.accelerometerData {
+//            print(accelerometerData)
+//        }
+//        if let gyroData = motionManager.gyroData {
+//            print(gyroData)
+//        }
+//        if let magnetometerData = motionManager.magnetometerData {
+//            print(magnetometerData)
+//        }
+//        if let deviceMotion = motionManager.deviceMotion {
+//            print(deviceMotion)
+//        }
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -41,24 +57,31 @@ class ViewController: UIViewController {
 
     //Helper function to count step
     func countMotion() {
-        print("call func")
-        print(pedoMeter)
-        pedoMeter.startUpdates(from: NSDate() as Date) {
-            (data, error) in
-            if error != nil {
-                print("There was an error obtaining pedometer data: \(error)")
-            } else {
-                print("Start counting...")
-                DispatchQueue.main.async(execute: { () -> Void in
-                    print("testing")
-                    self.ascFloor.text = "\(data?.floorsAscended)"
-                    //self.descFloor.text = "\(data?.floorsDescended)"
-                    self.stepCount.text = "\(data?.numberOfSteps)"
-//                    self.distance.text = "\(self.stringFromMeters(data.distance as! Double))"
-                })
-            }
+        if CMPedometer.isStepCountingAvailable() {
+            print("support step count...")
+            let yesterday = NSCalendar.current.date(byAdding: .day, value: -1, to: Date())
+            pedoMeter.startUpdates(from: yesterday!, withHandler: { data, error in
+                guard let data = data else {
+                    return
+                }
+                print("check updating...")
+                if error != nil {
+                    print("There was an error obtaining pedometer data: \(error)")
+                } else {
+                    print("Start counting...")
+                    print(data)
+//                    DispatchQueue.main.async(execute: { () -> Void in
+                        print("testing")
+                        self.ascFloor.text = "\(data.floorsAscended)"
+                        //self.descFloor.text = "\(data?.floorsDescended)"
+                        self.stepCount.text = "\(data.numberOfSteps)"
+    //                    self.distance.text = "\(self.stringFromMeters(data.distance as! Double))"
+//                    })
+                }
+            })
+        } else {
+            print("Step count is not available")
         }
-        
     }
     
     @IBAction func startBtn(_ sender: UIButton) {
