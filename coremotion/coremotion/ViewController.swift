@@ -19,16 +19,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var activityText: UILabel!
     
-    var shouldDetect = false
     let activityManager = CMMotionActivityManager()
     var timer: Timer!
+    var initialStartDate : NSDate?
     let pedoMeter = CMPedometer()
     var lastActivity : CMMotionActivity?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.update), userInfo: nil, repeats: true)
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -45,10 +43,10 @@ class ViewController: UIViewController {
     func updateActivity() {
         if(CMMotionActivityManager.isActivityAvailable()) {
             activityManager.startActivityUpdates(to: OperationQueue.main, withHandler: { (activity: CMMotionActivity?) -> Void in
+                print(activity!)
                 if activity?.stationary == false {
                     self.lastActivity = activity
                 }
-                
                 var activityString = "Other activity type"
                 
                 if (activity?.stationary == true) {
@@ -77,8 +75,11 @@ class ViewController: UIViewController {
     func countMotion() {
         if CMPedometer.isStepCountingAvailable() {
             print("support step count...")
-            let fromDate = NSDate(timeIntervalSinceNow: -(24 * 60 * 60)) //yesterday
-            pedoMeter.startUpdates(from: fromDate as Date, withHandler: { data, error in
+//            let fromDate = NSDate(timeIntervalSinceNow: -(1 * 60 * 60)) //1 hour ago
+            if initialStartDate == nil {
+                initialStartDate = NSDate(timeIntervalSinceNow: -(1 * 60 * 60)) //1 hour ago
+            }
+            pedoMeter.startUpdates(from: initialStartDate! as Date, withHandler: { data, error in
                 guard let data = data else {
                     return
                 }
@@ -104,12 +105,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startBtn(_ sender: UIButton) {
-        shouldDetect = true
+        if initialStartDate == nil {
+            initialStartDate = NSDate()
+        }
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(ViewController.update), userInfo: nil, repeats: true)
     }
 
-
     @IBAction func stopBtn(_ sender: UIButton) {
-        shouldDetect = false
+        self.timer.invalidate()
+        pedoMeter.stopUpdates()
     }
 
 
