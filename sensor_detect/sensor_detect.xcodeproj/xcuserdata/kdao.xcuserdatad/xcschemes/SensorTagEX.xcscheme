@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7FF608E51654FBE1004F4562"
-               BuildableName = "SensorTagEX.app"
-               BlueprintName = "SensorTagEX"
-               ReferencedContainer = "container:SensorTagEX.xcodeproj">
+               BuildableName = "sensor_detect.app"
+               BlueprintName = "sensor_detect"
+               ReferencedContainer = "container:sensor_detect.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7FF608E51654FBE1004F4562"
-            BuildableName = "SensorTagEX.app"
-            BlueprintName = "SensorTagEX"
-            ReferencedContainer = "container:SensorTagEX.xcodeproj">
+            BuildableName = "sensor_detect.app"
+            BlueprintName = "sensor_detect"
+            ReferencedContainer = "container:sensor_detect.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7FF608E51654FBE1004F4562"
-            BuildableName = "SensorTagEX.app"
-            BlueprintName = "SensorTagEX"
-            ReferencedContainer = "container:SensorTagEX.xcodeproj">
+            BuildableName = "sensor_detect.app"
+            BlueprintName = "sensor_detect"
+            ReferencedContainer = "container:sensor_detect.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7FF608E51654FBE1004F4562"
-            BuildableName = "SensorTagEX.app"
-            BlueprintName = "SensorTagEX"
-            ReferencedContainer = "container:SensorTagEX.xcodeproj">
+            BuildableName = "sensor_detect.app"
+            BlueprintName = "sensor_detect"
+            ReferencedContainer = "container:sensor_detect.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
