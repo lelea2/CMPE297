@@ -216,7 +216,7 @@
 				ORGANIZATIONNAME = "Texas Instruments";
 				TargetAttributes = {
 					7FF608E51654FBE1004F4562 = {
-						DevelopmentTeam = 5PKYKCYDR5;
+						DevelopmentTeam = 6Z65K99J89;
 					};
 				};
 			};
@@ -349,6 +349,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6Z65K99J89;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SensorTagEX/SensorTagEX-Prefix.pch";
 				INFOPLIST_FILE = "SensorTagEX/SensorTagEX-Info.plist";
@@ -363,6 +364,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6Z65K99J89;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SensorTagEX/SensorTagEX-Prefix.pch";
 				INFOPLIST_FILE = "SensorTagEX/SensorTagEX-Info.plist";
