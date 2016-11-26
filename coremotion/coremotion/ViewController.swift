@@ -73,7 +73,7 @@ class ViewController: UIViewController {
 
     //Helper function to count step
     func countMotion() {
-        if CMPedometer.isStepCountingAvailable() {
+        if (CMPedometer.isStepCountingAvailable() && CMPedometer.isFloorCountingAvailable()) {
             print("support step count...")
 //            let fromDate = NSDate(timeIntervalSinceNow: -(1 * 60 * 60)) //1 hour ago
             if initialStartDate == nil {
@@ -108,10 +108,13 @@ class ViewController: UIViewController {
         if initialStartDate == nil {
             initialStartDate = NSDate()
         }
+        print("start updating again...")
         timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(ViewController.update), userInfo: nil, repeats: true)
+        print(timer)
     }
 
     @IBAction func stopBtn(_ sender: UIButton) {
+        print("stop updating...")
         self.timer.invalidate()
         pedoMeter.stopUpdates()
     }
