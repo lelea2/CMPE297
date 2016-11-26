@@ -107,8 +107,9 @@
 				TargetAttributes = {
 					872C57801BD4B732008C4B53 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 5PKYKCYDR5;
+						DevelopmentTeam = 6Z65K99J89;
 						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
 								enabled = 1;
@@ -272,7 +273,9 @@
 				CODE_SIGN_ENTITLEMENTS = RunTracker/RunTracker.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6Z65K99J89;
 				INFOPLIST_FILE = RunTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devatelier.CMPERunTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,7 +291,9 @@
 				CODE_SIGN_ENTITLEMENTS = RunTracker/RunTracker.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 6Z65K99J89;
 				INFOPLIST_FILE = RunTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devatelier.CMPERunTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";

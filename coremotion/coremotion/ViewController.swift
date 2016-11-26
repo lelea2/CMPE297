@@ -10,7 +10,6 @@ import UIKit
 import Darwin
 import CoreMotion
 
-
 class ViewController: UIViewController {
 
     @IBOutlet var stepCount: UILabel!
@@ -18,27 +17,39 @@ class ViewController: UIViewController {
     @IBOutlet var descFloor: UILabel!
     @IBOutlet var distance: UILabel!
     
+    @IBOutlet weak var activityText: UILabel!
+    
     var shouldDetect = false
     let motionManager = CMMotionManager()
+    let activityManager = CMMotionActivityManager()
     var timer: Timer!
     let pedoMeter = CMPedometer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        countMotion()
+        updateActivity()
+//        countMotion()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.countMotion), userInfo: nil, repeats: true)
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //Function to update activity
+    func updateActivity() {
+        if(CMMotionActivityManager.isActivityAvailable()) {
+        }
+    }
 
     //Helper function to count step
     func countMotion() {
         if CMPedometer.isStepCountingAvailable() {
             print("support step count...")
-            let yesterday = NSCalendar.current.date(byAdding: .day, value: -1, to: Date())
-            pedoMeter.startUpdates(from: yesterday!, withHandler: { data, error in
+            let fromDate = NSDate(timeIntervalSinceNow: -(10 * 60)) //10 mins ago
+            pedoMeter.startUpdates(from: fromDate as Date, withHandler: { data, error in
                 guard let data = data else {
                     return
                 }
@@ -49,14 +60,12 @@ class ViewController: UIViewController {
                     print("Start counting...")
                     print(data)
                     DispatchQueue.main.async(execute: { () -> Void in
-                        print("testing")
                         self.ascFloor.text = "\(data.floorsAscended!)"
-                    self.descFloor.text = "\(data.floorsDescended!)"
-                    self.stepCount.text = "\(data.numberOfSteps)"
-                    var distance = data.distance?.doubleValue
-                    distance = Double(round(100 * distance!) / 100)
+                        self.descFloor.text = "\(data.floorsDescended!)"
+                        self.stepCount.text = "\(data.numberOfSteps)"
+                        var distance = data.distance?.doubleValue
+                        distance = Double(round(100 * distance!) / 100)
                         self.distance.text = "\(distance!)"
-    //                    self.distance.text = "\(self.stringFromMeters(data.distance as! Double))"
                     })
                 }
             })
