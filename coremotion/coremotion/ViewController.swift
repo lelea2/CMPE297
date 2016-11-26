@@ -20,16 +20,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var activityText: UILabel!
     
     var shouldDetect = false
-    let motionManager = CMMotionManager()
     let activityManager = CMMotionActivityManager()
     var timer: Timer!
     let pedoMeter = CMPedometer()
+    var lastActivity : CMMotionActivity?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateActivity()
-//        countMotion()
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.countMotion), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.update), userInfo: nil, repeats: true)
 
     }
     
@@ -38,9 +36,40 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func update() {
+        updateActivity()
+        countMotion()
+    }
+    
     //Function to update activity
     func updateActivity() {
         if(CMMotionActivityManager.isActivityAvailable()) {
+            activityManager.startActivityUpdates(to: OperationQueue.main, withHandler: { (activity: CMMotionActivity?) -> Void in
+                if activity?.stationary == false {
+                    self.lastActivity = activity
+                }
+                
+                var activityString = "Other activity type"
+                
+                if (activity?.stationary == true) {
+                    activityString = "Stationary"
+                }
+                
+                if (activity?.walking == true) {
+                    activityString = "Walking"
+                }
+                
+                if (activity?.running == true) {
+                    activityString = "Running"
+                }
+                
+                if (activity?.cycling == true) {
+                    activityString = "Cycling"
+                }
+                DispatchQueue.main.async(execute: { () -> Void in
+                    self.activityText.text = activityString
+                })
+            })
         }
     }
 
@@ -48,7 +77,7 @@ class ViewController: UIViewController {
     func countMotion() {
         if CMPedometer.isStepCountingAvailable() {
             print("support step count...")
-            let fromDate = NSDate(timeIntervalSinceNow: -(10 * 60)) //10 mins ago
+            let fromDate = NSDate(timeIntervalSinceNow: -(24 * 60 * 60)) //yesterday
             pedoMeter.startUpdates(from: fromDate as Date, withHandler: { data, error in
                 guard let data = data else {
                     return
