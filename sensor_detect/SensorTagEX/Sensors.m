@@ -1,11 +1,3 @@
-/*
- *  Sensors.h
- *
- * Created by Ole Andreas Torvmark on 10/2/12.
- * Copyright (c) 2012 Texas Instruments Incorporated - http://www.ti.com/
- * ALL RIGHTS RESERVED
- */
-
 #import "Sensors.h"
 
 @implementation sensorC953A
