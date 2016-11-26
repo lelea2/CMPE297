@@ -193,13 +193,17 @@
 				TargetAttributes = {
 					6DE2CD581DE5044E009E9732 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 6Z65K99J89;
+						LastSwiftMigration = 0810;
 					};
 					6DE2CD6C1DE5044E009E9732 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 6DE2CD581DE5044E009E9732;
 					};
 					6DE2CD771DE5044E009E9732 = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 6DE2CD581DE5044E009E9732;
 					};
 				};
@@ -397,10 +401,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6Z65K99J89;
 				INFOPLIST_FILE = falldetect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.falldetect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -408,10 +414,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6Z65K99J89;
 				INFOPLIST_FILE = falldetect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.falldetect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -423,6 +431,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.falldetectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/falldetect.app/falldetect";
 			};
 			name = Debug;
@@ -435,6 +444,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.falldetectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/falldetect.app/falldetect";
 			};
 			name = Release;
@@ -446,6 +456,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.falldetectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = falldetect;
 				USES_XCTRUNNER = YES;
 			};
@@ -458,6 +469,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmpe297.falldetectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = falldetect;
 				USES_XCTRUNNER = YES;
 			};
@@ -482,6 +494,7 @@
 				6DE2CD831DE5044E009E9732 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6DE2CD841DE5044E009E9732 /* Build configuration list for PBXNativeTarget "falldetectTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +503,7 @@
 				6DE2CD861DE5044E009E9732 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6DE2CD871DE5044E009E9732 /* Build configuration list for PBXNativeTarget "falldetectUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +512,7 @@
 				6DE2CD891DE5044E009E9732 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

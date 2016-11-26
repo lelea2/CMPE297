@@ -23,12 +23,12 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func startBtn(sender: UIButton) {
+    @IBAction func startBtn(_ sender: UIButton) {
         shouldDetect = true
     }
 
 
-    @IBAction func stopBtn(sender: UIButton) {
+    @IBAction func stopBtn(_ sender: UIButton) {
         shouldDetect = false
     }
 
