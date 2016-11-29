@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KeyValueApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KuA-Dk-E7l">
+                                <rect key="frame" x="250" y="285" width="101" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="EaF-81-IJw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Save to iCloud">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveText" destination="BYZ-38-t0r" eventType="touchUpInside" id="eMc-mg-fs9"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eV1-N5-uln">
+                                <rect key="frame" x="276" y="323" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchForiCloud" destination="BYZ-38-t0r" eventType="valueChanged" id="mGY-Ze-hHe"/>
+                                </connections>
+                            </switch>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ct7-YI-LmN">
+                                <rect key="frame" x="202" y="247" width="197" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="197" id="zgC-d0-pW6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KuA-Dk-E7l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W90-X0-cPd"/>
+                            <constraint firstItem="eV1-N5-uln" firstAttribute="top" secondItem="KuA-Dk-E7l" secondAttribute="bottom" constant="8" symbolic="YES" id="bM0-yP-HhJ"/>
+                            <constraint firstItem="KuA-Dk-E7l" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f6x-u5-fjL"/>
+                            <constraint firstItem="eV1-N5-uln" firstAttribute="centerX" secondItem="KuA-Dk-E7l" secondAttribute="centerX" id="hSw-8q-qFw"/>
+                            <constraint firstItem="KuA-Dk-E7l" firstAttribute="centerX" secondItem="ct7-YI-LmN" secondAttribute="centerX" id="qjW-VV-r4x"/>
+                            <constraint firstItem="KuA-Dk-E7l" firstAttribute="top" secondItem="ct7-YI-LmN" secondAttribute="bottom" constant="8" symbolic="YES" id="xDS-1U-GHd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="iCloudSwitch" destination="eV1-N5-uln" id="FEB-xj-tfd"/>
+                        <outlet property="saveButton" destination="KuA-Dk-E7l" id="E0P-Of-0Nx"/>
+                        <outlet property="textField" destination="ct7-YI-LmN" id="cvI-nz-aRF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
