@@ -20,6 +20,10 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+    <key>NSSiriUsageDescription</key>
+    <string>Siri support is used to perform photo searches.</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Display reminder as table</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>

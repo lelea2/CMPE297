@@ -19,6 +19,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print ("Siri UI...")
         // Do any additional setup after loading the view.
     }
     
@@ -34,6 +35,7 @@ class IntentViewController: UIViewController, INUIHostedViewControlling {
         // Do configuration here, including preparing views and calculating a desired size for presentation.
         
         if let completion = completion {
+            print("Testing completion...")
             completion(self.desiredSize)
         }
     }
