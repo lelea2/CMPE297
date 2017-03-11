@@ -33,6 +33,8 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Flip view here, image doesnt seem appear correct either
+//        self.view.transform = CGAffineTransform(scaleX: -1, y: 1);
         setupSession()
         setupPreview()
         setupFace()
@@ -231,25 +233,17 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         //        <AVCaptureConnection: 0x17000fee0 [type:mobj][enabled:1][active:1]>
         //        print(connection)
         for metadataObject in metadataObjects as! [AVMetadataObject] {
-            //            print(metadataObject)
             if metadataObject.type == AVMetadataObjectTypeFace {
                 let transformedMetadataObject = previewLayer.transformedMetadataObject(for: metadataObject)
-                //                print(transformedMetadataObject)
                 let face = transformedMetadataObject?.bounds
-                //                <AVMetadataFaceObject: 0x17003ef60, faceID=1, bounds={0.5,0.0 0.5x0.7}, rollAngle=270.0, yawAngle=0.0, time=179113720843541>
-                //                Optional((-41.9701773562897, 301.563706893297, 328.800317212579, 328.454811213407))
                 faces.append(face!)
             }
         }
-        //        print("FACE", faces) //return array of face coordination
-        //        print(faces.count)
         if (faces.count > 0) { //face available
             setlayerHidden(false)
             DispatchQueue.main.async(execute: {
                 () -> Void in
                 self.faceRectCALayer.frame = self.findMaxFaceRect(faces)
-                //                (36.6586173612394, 124.487212860602, 301.682765277521, 301.150499278796)
-                //                print(self.faceRectCALayer.frame)
                 self.getImageData(faceObject: self.faceRectCALayer.frame)
             })
         } else {
@@ -284,9 +278,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
      * Function draw rectangle for image
      */
     func findMaxFaceRect(_ faces : Array<CGRect>) -> CGRect {
-
         if (faces.count == 1) {
-            //            print(faces[0])
             return increaseRect(rect: faces[0], byPercentage: 0.1)
             //            return faces[0]
         }
